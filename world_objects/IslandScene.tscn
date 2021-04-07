@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world_objects/Island.glb" type="PackedScene" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.264508
+height = 0.830647
+
+[node name="Island" type="Spatial"]
+
+[node name="IslandMesh" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.92621, -0.66744, -4.27562 )
+
+[node name="StaticBody" type="StaticBody" parent="IslandMesh"]
+
+[node name="CollisionShape" type="CollisionShape" parent="IslandMesh/StaticBody"]
+transform = Transform( 26.226, 0, 0, 0, 18.436, 0, 0, 0, 27.648, -0.554873, 7.29631, 0.219799 )
+shape = SubResource( 1 )

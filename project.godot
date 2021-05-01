@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Ship"
 run/main_scene="res://World.tscn"
 
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

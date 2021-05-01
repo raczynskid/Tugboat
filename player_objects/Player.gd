@@ -8,13 +8,16 @@ export var rot_speed : float = 0.6
 
 var velocity = Vector3.ZERO
 var current_speed : float = 0
+onready var base_buoyancy = transform.origin.y
 
 func _ready():
-	pass # Replace with function body.
+	Global.Player = self
+	
 
 
 func _physics_process(delta):
 	get_input(delta)
+	buoyancy()
 	velocity = move_and_slide(velocity, Vector3.UP)
 
 func get_input(delta):
@@ -39,3 +42,6 @@ func clamp_vector(vector : Vector3, min_val, max_val):
 	vector.z = clamp(vector.z, min_val, max_val)
 	return vector
 	
+func buoyancy():
+	if(transform.origin.y < base_buoyancy):
+		transform.origin.y += 0.01

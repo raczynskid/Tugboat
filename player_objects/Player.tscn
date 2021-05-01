@@ -9,6 +9,7 @@ radius = 1.03402
 height = 2.79159
 
 [node name="Player" type="KinematicBody"]
+collision_layer = 3
 script = ExtResource( 2 )
 
 [node name="Right" parent="." instance=ExtResource( 3 )]
@@ -16,12 +17,10 @@ transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0
 cast_shadow = 0
 fromWidth = 0.2
 scaleAcceleration = 1.292
-lifespan = 1.0
 
 [node name="Left" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -0.45, 0.450683, 1 )
 fromWidth = 0.2
-lifespan = 1.0
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00988913, 1.04269, 0 )

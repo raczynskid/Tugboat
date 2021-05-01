@@ -27,7 +27,6 @@ func get_input(delta):
 		current_speed = lerp(current_speed, 0, deceleration)
 
 	if Input.is_action_pressed("ui_right"):
-		print(rot_speed * delta)
 		rotate_y((-rot_speed * delta) * (current_speed/3))
 	if Input.is_action_pressed("ui_left"):
 		rotate_y((rot_speed * delta) * (current_speed/3))

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://world_objects/road/road_curve.glb" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 4.77244, 1.96052, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 2.89709, 1.7282, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 1.75982, 9 )
+
+[node name="Road" type="Spatial"]
+
+[node name="road_curve" parent="." instance=ExtResource( 1 )]
+
+[node name="StaticBody" type="StaticBody" parent="road_curve"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0085125, -0.0203094, 0.0261955 )
+
+[node name="CollisionShape" type="CollisionShape" parent="road_curve/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.63941, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="road_curve/StaticBody"]
+transform = Transform( 0.78301, 0, -0.622009, 0, 1, 0, 0.622009, 0, 0.78301, 10.6042, 0, 1.05057 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="road_curve/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 11 )
+shape = SubResource( 3 )

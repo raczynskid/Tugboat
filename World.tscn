@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://world_objects/IslandScene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://world_objects/bridge/Bridge.tscn" type="PackedScene" id=4]
+[ext_resource path="res://world_objects/beach/beach.tscn" type="PackedScene" id=5]
+[ext_resource path="res://world_objects/road/road.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Spatial"]
+
+[node name="Road" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3.20203, 2.58626, -1.30076 )
 
 [node name="Water" parent="." instance=ExtResource( 1 )]
 
@@ -19,10 +24,22 @@ light_indirect_energy = 0.35
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.90744, 0.548833, 7.75882 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.0050252, -0.731092, 0.68226, -0.00538472, 0.682279, 0.731072, -0.999973, 2.32837e-09, -0.00736532, 30.5807, 18.509, 0 )
+transform = Transform( -0.0050252, -0.731092, 0.68226, -0.00538472, 0.682279, 0.731072, -0.999973, 2.09553e-09, -0.00736531, 30.5807, 18.509, -4.9612 )
 
 [node name="Island" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6068, 1.39029, -1.8123 )
 
 [node name="Bridge" parent="." instance=ExtResource( 4 )]
-transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 16.5141, 0.881504, 7.81323 )
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3.28839, 0.881504, -23.7909 )
+
+[node name="Beach" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.75, 1.15508, -29.1696 )
+
+[node name="Beach2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 24.0364, 1.15508, -29.1696 )
+
+[node name="Beach3" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.30584, 1.15508, -29.1696 )
+
+[node name="Beach4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.5406, 1.15508, -29.1696 )

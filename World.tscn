@@ -23,11 +23,11 @@ light_indirect_energy = 0.35
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.90744, 0.548833, 7.75882 )
 
-[node name="CinematicCam" type="Camera" parent="."]
-transform = Transform( -0.50185, 0.0435523, 0.863858, 0.000369295, 0.998742, -0.0501381, -0.864955, -0.0248428, -0.501235, 28.824, 3.67924, -29.5539 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.0050252, -0.731092, 0.68226, -0.00538472, 0.682279, 0.731072, -0.999973, 2.09553e-09, -0.00736531, 30.5807, 18.509, -4.9612 )
+
+[node name="CinematicCam" type="Camera" parent="."]
+transform = Transform( -0.50185, 0.0435523, 0.863858, 0.000369295, 0.998742, -0.0501381, -0.864955, -0.0248428, -0.501235, 28.824, 3.67924, -29.5539 )
 
 [node name="Island" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6068, 1.39029, -1.8123 )

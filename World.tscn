@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
@@ -8,11 +8,12 @@
 [ext_resource path="res://world_objects/road/road.tscn" type="PackedScene" id=6]
 [ext_resource path="res://player_objects/barge/Barge.tscn" type="PackedScene" id=7]
 [ext_resource path="res://world_objects/train/locomotive.tscn" type="PackedScene" id=8]
+[ext_resource path="res://world_objects/train/bridge1.tscn" type="PackedScene" id=9]
 
 [node name="World" type="Spatial"]
 
 [node name="locomotive" parent="." instance=ExtResource( 8 )]
-transform = Transform( -0.5, 0, -1.62921e-07, 0, 0.5, 0, 1.62921e-07, 0, -0.5, 31.1687, 4.48738, -33.0957 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.1483, 3.33509, -2.86529 )
 
 [node name="Road" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 3.20203, 2.58626, -1.30076 )
@@ -37,15 +38,14 @@ fov = 32.3
 far = 200.0
 
 [node name="CinematicCam" type="Camera" parent="."]
-transform = Transform( 0.742274, -0.0338712, -0.66924, 0.000369295, 0.998742, -0.0501381, 0.670097, 0.0369691, 0.741352, 18.019, 4.979, -29.596 )
-fov = 39.6
+transform = Transform( -0.759027, 0.0329229, 0.650227, 0.000369295, 0.998742, -0.0501382, -0.65106, -0.0378161, -0.758084, -24.9952, 5.10315, -29.596 )
+fov = 69.0
 
 [node name="Island" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6068, 1.39029, -1.8123 )
 
 [node name="Bridge" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3.28839, 0.881504, -23.7909 )
-raised = true
 
 [node name="Beach" parent="." instance=ExtResource( 5 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.75, 1.15508, -29.1696 )
@@ -61,3 +61,9 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.5406, 1.15508, -29.1
 
 [node name="Barge" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4192, 5.18068, 4.86142 )
+
+[node name="bridge1" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1663, 1.93847, -7.58833 )
+
+[node name="bridge2" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1663, 1.93847, -25.9545 )

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://effects/particle_border_effect.tscn" type="PackedScene" id=1]
+
+[node name="TargetArea" type="Spatial"]
+
+[node name="Particles" type="Spatial" parent="."]
+
+[node name="Particles" parent="Particles" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77258, 0, 0 )
+
+[node name="Particles2" parent="Particles" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73687, 0, 0 )
+
+[node name="Particles3" parent="Particles" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0065279, 0, -4.42149 )
+
+[node name="Particles4" parent="Particles" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0065279, 0, 5.15298 )

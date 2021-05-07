@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://player_objects/ChainLink.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player_objects/Chain.gd" type="Script" id=2]
+
+[node name="Chain" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="ChainLink" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.29226 )
+
+[node name="PinJoint" parent="ChainLink" index="2"]
+nodes/node_b = NodePath("../../ChainLink2")
+
+[node name="Hook1" type="PinJoint" parent="ChainLink"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.229727 )
+nodes/node_a = NodePath("..")
+
+[node name="ChainLink2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.7882 )
+
+[node name="PinJoint" parent="ChainLink2" index="2"]
+nodes/node_b = NodePath("../../ChainLink3")
+
+[node name="ChainLink3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.31511 )
+
+[node name="PinJoint" parent="ChainLink3" index="2"]
+nodes/node_b = NodePath("../../ChainLink4")
+
+[node name="ChainLink4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.848839 )
+
+[node name="PinJoint" parent="ChainLink4" index="2"]
+nodes/node_b = NodePath("../../ChainLink5")
+
+[node name="ChainLink5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.391009 )
+
+[editable path="ChainLink"]
+[editable path="ChainLink2"]
+[editable path="ChainLink3"]
+[editable path="ChainLink4"]
+[editable path="ChainLink5"]

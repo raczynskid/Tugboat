@@ -8,7 +8,9 @@
 radius = 2.18419
 height = 1.99823
 
-[node name="Barge" type="RigidBody"]
+[node name="Barge" type="RigidBody" groups=[
+"barges",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14811, 0, 0 )
 mass = 200.0
 physics_material_override = SubResource( 1 )

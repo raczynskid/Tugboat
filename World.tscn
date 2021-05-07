@@ -52,18 +52,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.1663, 6.39924, 25.3642 )
 [node name="locomotive" parent="props" instance=ExtResource( 8 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.1483, 7.79586, 33.9361 )
 
-[node name="cameras" type="Node" parent="."]
-
-[node name="Camera" type="Camera" parent="cameras"]
-transform = Transform( -0.0050252, -0.731092, 0.68226, -0.00538472, 0.682279, 0.731072, -0.999973, 2.09553e-09, -0.00736531, 66.5849, 67.0043, -4.9612 )
-fov = 32.3
-far = 200.0
-
-[node name="Camera2" type="Camera" parent="cameras"]
-transform = Transform( -0.00672276, -0.515077, 0.857117, -0.00676203, 0.857141, 0.515038, -0.999955, -0.00233338, -0.00924531, 35.566, 10, -4.961 )
-fov = 56.5
-far = 200.0
-
 [node name="lights" type="Node" parent="."]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="lights"]
@@ -78,8 +66,8 @@ light_indirect_energy = 0.35
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8921, 0.548833, 6.46007 )
 
 [node name="CinematicCam" type="Camera" parent="Player"]
-transform = Transform( 1, -0.000366519, 0, 0.000327905, 0.894646, 0.446776, -0.000163752, -0.446776, 0.894646, -0.099, 5.148, 4.765 )
-fov = 71.6
+transform = Transform( 1, -0.000366519, 0, 0.000273415, 0.745976, 0.665973, -0.000244092, -0.665973, 0.745976, -0.199, 9.902, 10.34 )
+fov = 69.9
 
 [node name="Barge" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.3201, 1.69734, 16.2495 )
@@ -98,6 +86,18 @@ nodes/node_b = NodePath("../../../Player")
 
 [node name="PinJoint" parent="Chain/ChainLink5" index="2"]
 nodes/node_b = NodePath("../../../Barge")
+
+[node name="cameras" type="Node" parent="."]
+
+[node name="Camera" type="Camera" parent="cameras"]
+transform = Transform( -0.0050252, -0.731092, 0.68226, -0.00538472, 0.682279, 0.731072, -0.999973, 2.09553e-09, -0.00736531, 66.5849, 67.0043, -4.9612 )
+fov = 32.3
+far = 200.0
+
+[node name="Camera2" type="Camera" parent="cameras"]
+transform = Transform( -0.00672276, -0.515077, 0.857117, -0.00676203, 0.857141, 0.515038, -0.999955, -0.00233338, -0.00924531, 35.566, 10, -4.961 )
+fov = 56.5
+far = 200.0
 
 [editable path="Chain"]
 [editable path="Chain/ChainLink"]

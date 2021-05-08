@@ -1,0 +1,51 @@
+[gd_scene format=2]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 692.401
+margin_top = 239.145
+margin_right = 778.401
+margin_bottom = 221.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 82.0
+margin_bottom = 116.0
+custom_constants/separation = 12
+
+[node name="NewGame" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_right = 82.0
+margin_bottom = 20.0
+text = "New Game"
+align = 2
+
+[node name="Load" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 82.0
+margin_bottom = 52.0
+text = "Load"
+
+[node name="Options" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 82.0
+margin_bottom = 84.0
+text = "Options"
+
+[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 82.0
+margin_bottom = 116.0
+text = "Exit"
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+margin_left = 86.0
+margin_right = 86.0
+margin_bottom = 116.0

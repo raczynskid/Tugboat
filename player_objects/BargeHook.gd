@@ -17,12 +17,10 @@ func _process(delta):
 
 	if not locked and locked_timer > 0:
 		locked_timer -= delta
-		print(locked_timer)
 
 func _on_barge_locator_body_entered(body):
 	if (not locked) and (locked_timer <= 0):
 		if body.is_in_group("barges"):
-			print("lock")
 			self.set("nodes/node_a", body.get_path())
 			self.set("nodes/node_b", chain_node.get_path())
 			locked = true
@@ -30,6 +28,5 @@ func _on_barge_locator_body_entered(body):
 func unlock():
 	locked = false
 	locked_timer = 5
-	print('release')
 	self.set("nodes/node_a", "")
 	self.set("nodes/node_b", "")

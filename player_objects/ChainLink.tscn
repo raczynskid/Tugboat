@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[sub_resource type="CylinderMesh" id=1]
-radial_segments = 12
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.439216, 0.439216, 0.439216, 1 )
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.37
+
+[sub_resource type="SphereMesh" id=1]
+material = SubResource( 3 )
+radial_segments = 16
+rings = 8
 
 [sub_resource type="CylinderShape" id=2]
 radius = 0.0976726
@@ -11,7 +19,7 @@ height = 10.3694
 gravity_scale = 0.0
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( -4.37298e-09, -0.0200084, 0, 0.100042, -8.74596e-10, 0, 0, 0, 0.200084, 0, 0, 0 )
+transform = Transform( -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = null
 

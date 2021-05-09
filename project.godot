@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Ship"
-run/main_scene="res://World.tscn"
+run/main_scene="res://interfaces/main_menu_background.tscn"
 config/icon="res://pics/tmp.png"
 
 [autoload]

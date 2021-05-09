@@ -8,9 +8,17 @@ onready var object_attached = null
 onready var player = Global.Player
 onready var distance_to_attached : float = 0
 
-func _ready():
-	pass 
+signal locked_to_barge
+signal unlocked_from_barge
 
+func _ready():
+
+	# connect signals
+	var chain_root = get_parent().get_parent()
+	connect("locked_to_barge", self, "_on_locked_to_barge")
+	chain_root.connect("locked_to_barge", self, "_on_locked_to_barge") 
+	connect("unlocked_from_barge", self, "_on_unlocked_from_barge")
+	chain_root.connect("unlocked_from_barge", self, "_on_unlocked_from_barge") 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -38,10 +46,12 @@ func _on_barge_locator_body_entered(body):
 			self.set("nodes/node_b", chain_node.get_path())
 			locked = true
 			object_attached = body
+			emit_signal("locked_to_barge")
 
 func unlock():
 	# release the currently pulled object from chain
 	locked = false
+	emit_signal("unlocked_from_barge")
 	locked_timer = 5
 	self.set("nodes/node_a", "")
 	self.set("nodes/node_b", "")

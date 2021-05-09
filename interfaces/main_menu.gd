@@ -7,4 +7,4 @@ func _process(delta):
 	pass
 
 func _on_NewGame_button_up():
-	return get_tree().change_scene("res://levels/LevelTemplate.tscn")
+	return get_tree().change_scene("res://levels/1Tutorial.tscn")

@@ -1,0 +1,1 @@
+Esta tipograf[ia es de uso libre para cualquie fin. En Caso de alguna duda ponerse en contacto  por el siguient medio yumircanelones@gmail.com

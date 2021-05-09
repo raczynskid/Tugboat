@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world_objects/gameplay_objects/unload_area.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player_objects/Chain.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player_objects/barge/Barge.tscn" type="PackedScene" id=5]
 
 [node name="Level" type="Spatial"]
 
@@ -28,3 +31,25 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.69659, 0 )
+
+[node name="Unload" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.204, 0 )
+
+[node name="Chain" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55343, 5.10975 )
+
+[node name="Hook1" parent="Chain/ChainLink" index="3"]
+nodes/node_b = NodePath("../../../Player")
+
+[node name="PinJoint" parent="Chain/ChainLink5" index="2"]
+nodes/node_a = NodePath("")
+
+[node name="Barge" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7887, 2.40606, 14.617 )
+
+[editable path="Chain"]
+[editable path="Chain/ChainLink"]
+[editable path="Chain/ChainLink2"]
+[editable path="Chain/ChainLink3"]
+[editable path="Chain/ChainLink4"]
+[editable path="Chain/ChainLink5"]

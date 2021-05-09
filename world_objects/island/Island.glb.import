@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Island.glb-1d3de64a66d87eba0d38d47c2954d16d.scn"
+path="res://.import/Island.glb-ea056012b8be19c9dab6fceb54994f56.scn"
 
 [deps]
 
-source_file="res://world_objects/Island.glb"
-dest_files=[ "res://.import/Island.glb-1d3de64a66d87eba0d38d47c2954d16d.scn" ]
+source_file="res://world_objects/island/Island.glb"
+dest_files=[ "res://.import/Island.glb-ea056012b8be19c9dab6fceb54994f56.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true

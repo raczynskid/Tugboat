@@ -4,7 +4,7 @@
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://world_objects/beach/beach.tscn" type="PackedScene" id=3]
 [ext_resource path="res://world_objects/bridge/Bridge.tscn" type="PackedScene" id=4]
-[ext_resource path="res://world_objects/IslandScene.tscn" type="PackedScene" id=5]
+[ext_resource path="res://world_objects/island/IslandScene.tscn" type="PackedScene" id=5]
 [ext_resource path="res://interfaces/main_menu.tscn" type="PackedScene" id=6]
 
 [node name="mm_bg" type="Spatial"]

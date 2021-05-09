@@ -2,14 +2,14 @@
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://world_objects/IslandScene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://world_objects/island/IslandScene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://world_objects/bridge/Bridge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://world_objects/beach/beach.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world_objects/road/road.tscn" type="PackedScene" id=6]
 [ext_resource path="res://player_objects/barge/Barge.tscn" type="PackedScene" id=7]
 [ext_resource path="res://world_objects/train/locomotive.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world_objects/train/bridge1.tscn" type="PackedScene" id=9]
-[ext_resource path="res://effects/target_area.tscn" type="PackedScene" id=10]
+[ext_resource path="res://world_objects/gameplay_objects/unload_area.tscn" type="PackedScene" id=10]
 [ext_resource path="res://player_objects/Chain.tscn" type="PackedScene" id=11]
 
 [node name="World" type="Spatial"]
@@ -91,13 +91,13 @@ nodes/node_b = NodePath("../../../Player")
 nodes/node_a = NodePath("")
 
 [node name="Barge" parent="." instance=ExtResource( 7 )]
-transform = Transform( -0.63964, 0, -0.768674, 0, 1, 0, 0.768674, 0, -0.63964, 4.18621, 1.39624, 21.1214 )
-
-[node name="TargetArea" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7796, 1.38478, -15.7248 )
+transform = Transform( -0.63964, 0, -0.768674, 0, 1, 0, 0.768674, 0, -0.63964, 16.6793, 1.39624, 21.1214 )
 
 [node name="Bridge" parent="." instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 3.28839, 0.881504, -23.7909 )
+
+[node name="Unload" parent="." instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.237, 1.148, -19.627 )
 
 [editable path="Chain"]
 [editable path="Chain/ChainLink"]

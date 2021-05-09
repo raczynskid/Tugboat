@@ -1,7 +1,7 @@
 extends KinematicBody
 
 export var gravity = 0
-export var max_speed : float = 10
+export var max_speed : float = 6
 export var acceleration : float = 0.05
 export var deceleration : float = 0.03
 export var rot_speed : float = 0.6

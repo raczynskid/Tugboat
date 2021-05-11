@@ -12,13 +12,7 @@ signal locked_to_barge
 signal unlocked_from_barge
 
 func _ready():
-
-	# connect signals
-	var chain_root = get_parent().get_parent()
-	connect("locked_to_barge", self, "_on_locked_to_barge")
-	chain_root.connect("locked_to_barge", self, "_on_locked_to_barge") 
-	connect("unlocked_from_barge", self, "_on_unlocked_from_barge")
-	chain_root.connect("unlocked_from_barge", self, "_on_unlocked_from_barge") 
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

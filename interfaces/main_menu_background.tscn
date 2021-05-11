@@ -16,10 +16,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform = Transform( 0.945217, 0.095399, -0.312192, 0, 0.956346, 0.292238, 0.326443, -0.276229, 0.903954, -15.593, 5.211, 29.388 )
 fov = 64.5
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera"]
-
-[node name="MainMenu" parent="Camera/CanvasLayer" instance=ExtResource( 6 )]
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( -0.956366, 0, 0.292171, 0, 1, 0, -0.292171, 0, -0.956366, -17.194, 1.495, 19.322 )
 
@@ -34,3 +30,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.0111, 2.01517, 8.49332 )
 
 [node name="Island2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.438826, 0, -0.898572, 0, 1, 0, 0.898572, 0, -0.438826, 18.0111, 2.01517, -9.60939 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
+anchor_left = 1.0
+anchor_top = 1.0
+margin_left = -1024.0
+margin_top = -600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3

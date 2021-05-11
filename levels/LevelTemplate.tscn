@@ -43,6 +43,7 @@ nodes/node_b = NodePath("../../../Player")
 nodes/node_a = NodePath("")
 
 [node name="Message" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [connection signal="locked_to_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_locked_to_barge"]
 [connection signal="unlocked_from_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_unlocked_from_barge"]

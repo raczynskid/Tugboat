@@ -2,6 +2,7 @@
 
 [ext_resource path="res://player_objects/BargeHook.gd" type="Script" id=1]
 
+
 [sub_resource type="SphereShape" id=1]
 
 [node name="PinJoint" type="Generic6DOFJoint"]

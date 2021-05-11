@@ -4,6 +4,7 @@
 [ext_resource path="res://player_objects/Chain.gd" type="Script" id=2]
 [ext_resource path="res://player_objects/BargeHook.tscn" type="PackedScene" id=3]
 
+
 [node name="Chain" type="Spatial"]
 script = ExtResource( 2 )
 

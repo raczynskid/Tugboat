@@ -11,7 +11,8 @@ onready var messages = {
 						3 : "Great job! Now set sail to the designated area.",
 						4 : "Amazing! The goal of the game is to deliver cargo to points like these. Push the barge into the new target area!",
 						5 : "You can also use your tow cable to pull barges into position. Touch the barge with the tow cable to automatically attach.",
-						6 : "Now pull the barge into the next target area and press SPACE to disconnect."
+						6 : "Now pull the barge into the next target area and press SPACE to disconnect.",
+						7 : "Great job! You know the basics - now get to the harbour and get on hauling!"
 						}
 
 onready var up_pressed = false
@@ -72,5 +73,14 @@ func _physics_process(delta):
 				ui_controls.change_text(messages[6])
 				unload_area.queue_free()
 				level_controls.spawn_unload_area(20, 4, -30)
-				
-				
+		7:
+			var unload_area = level_controls.get_node("Unload")
+			var chain = level_controls.get_node("Chain")
+
+			if unload_area.barge_parked and not chain.locked:
+				current_stage += 1
+				ui_controls.change_text(messages[7])
+		8:
+			if Input.is_action_just_pressed("ui_accept"):
+				get_tree().change_scene("res://levels/2Tutorial.tscn")
+		

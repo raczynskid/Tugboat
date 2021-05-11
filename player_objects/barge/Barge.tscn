@@ -12,6 +12,8 @@ height = 1.99823
 "barges",
 ]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.14811, 0, 0 )
+collision_layer = 3
+collision_mask = 3
 mass = 200.0
 physics_material_override = SubResource( 1 )
 linear_damp = 0.0

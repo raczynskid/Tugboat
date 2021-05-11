@@ -24,7 +24,7 @@ shadow_enabled = true
 [node name="main_camera" type="Camera" parent="cameras"]
 transform = Transform( -0.0107859, -0.731025, 0.682265, 0, 0.682305, 0.731068, -0.999942, 0.00788522, -0.00735926, 103.045, 106.325, 0 )
 keep_aspect = 0
-fov = 32.3
+fov = 56.1
 far = 8192.0
 
 [node name="water" parent="." instance=ExtResource( 1 )]

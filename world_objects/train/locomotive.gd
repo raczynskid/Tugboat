@@ -13,4 +13,4 @@ func _ready():
 
 
 func _process(delta):
-	translate(Vector3(delta*2, 0, 0))
+	pass

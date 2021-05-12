@@ -6,7 +6,7 @@
 [ext_resource path="res://effects/smoke.tscn" type="PackedScene" id=4]
 [ext_resource path="res://world_objects/train/locomotive.gd" type="Script" id=5]
 
-[sub_resource type="ArrayMesh" id=9]
+[sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube005"
 surfaces/0 = {
 "aabb": AABB( -1.9472, -0.960014, -30.4917, 2, 2, 60.802 ),
@@ -33,7 +33,7 @@ surfaces/1 = {
 "vertex_count": 32
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=2]
 resource_name = "Run"
 length = 2.5
 loop = true
@@ -78,7 +78,7 @@ script = ExtResource( 5 )
 
 [node name="Cube005" type="MeshInstance" parent="." index="0"]
 transform = Transform( 2.1092, -3.63798e-12, -1.73573e-12, 2.32831e-10, 0.0492723, -6.52393e-16, 2.11885e-10, 1.86042e-15, 0.0172783, 2.19035, -0.995387, -4.25982e-09 )
-mesh = SubResource( 9 )
+mesh = SubResource( 1 )
 material/0 = null
 material/1 = null
 
@@ -102,7 +102,7 @@ transform = Transform( 1, -0.000747029, -1.00457e-10, 0.000747029, 1, -3.7758e-1
 
 [node name="AnimationPlayer" parent="." index="14"]
 autoplay = "Run"
-anims/Run = SubResource( 13 )
+anims/Run = SubResource( 2 )
 
 [node name="Particles" parent="." index="15" instance=ExtResource( 4 )]
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 2.06049, 0.637675, 0 )

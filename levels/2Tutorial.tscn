@@ -10,7 +10,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0251255, 0, -0.026391 )
 
 [node name="Barge" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.2213, 10.9496, 2.48282 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27681, 3.81797, -14.435 )
 
 [node name="WarehouseDispenser" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.48927, -19.532 )

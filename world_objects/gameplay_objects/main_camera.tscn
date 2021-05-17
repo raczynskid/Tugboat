@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://world_objects/gameplay_objects/main_camera.gd" type="Script" id=1]
+
+[node name="main_camera" type="Camera"]
+transform = Transform( -0.0107859, -0.731025, 0.682265, 0, 0.682305, 0.731068, -0.999942, 0.00788522, -0.00735926, 103.045, 106.325, 0 )
+keep_aspect = 0
+fov = 30.9
+far = 8192.0
+script = ExtResource( 1 )

@@ -24,6 +24,4 @@ Global="*res://scripts/Global.gd"
 
 [rendering]
 
-quality/filters/anisotropic_filter_level=2
-quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"

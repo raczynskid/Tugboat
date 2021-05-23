@@ -21,6 +21,7 @@ config/icon="res://pics/tmp.png"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+Player="res://player_objects/Player.gd"
 
 [rendering]
 

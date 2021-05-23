@@ -3,7 +3,7 @@ extends KinematicBody
 export var gravity = 0
 export var max_speed : float = 6
 export var acceleration : float = 0.05
-export var deceleration : float = 0.03
+export var deceleration : float = 0.05
 export var rot_speed : float = 0.6
 
 var velocity = Vector3.ZERO
@@ -25,9 +25,7 @@ func get_input(delta):
 	if Input.is_action_pressed("ui_up"):
 		current_speed = lerp(current_speed, max_speed, acceleration)
 	elif Input.is_action_pressed("ui_down"):
-		current_speed = clamp(current_speed - acceleration, -(0.7 * max_speed), max_speed)
-	else:
-		current_speed = lerp(current_speed, 0, deceleration)
+		current_speed = clamp(current_speed - 2*acceleration, -(0.7 * max_speed), max_speed)
 
 	if Input.is_action_pressed("ui_right"):
 		rotate_y((-rot_speed * delta) * (current_speed/3))

@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://interfaces/gauges/cargo_gauge_body.gltf" type="PackedScene" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "add"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 0.707107 ),
+"update": 0,
+"values": [ Vector3( 0.1, 0.1, 0.1 ), Vector3( 0.7, 0.7, 0.7 ), Vector3( 0.3, 0.3, 0.3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "spin"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 360, 0 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "add"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "spin"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=5]
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=6]
+states/add/node = SubResource( 3 )
+states/add/position = Vector2( 81.6667, 67.8889 )
+states/spin/node = SubResource( 4 )
+states/spin/position = Vector2( 300.667, 75 )
+transitions = [ "add", "spin", SubResource( 5 ) ]
+start_node = "add"
+graph_offset = Vector2( -205, -92 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+
+[node name="cargo_gauge_single" type="Spatial"]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0 )
+
+[node name="cargo_gauge_body" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.492735, 0, 0.870179, 0, 1, 0, -0.870179, 0, 0.492735, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cargo_gauge_body"]
+autoplay = "add"
+anims/add = SubResource( 1 )
+anims/spin = SubResource( 2 )
+
+[node name="AnimationTree" type="AnimationTree" parent="cargo_gauge_body"]
+tree_root = SubResource( 6 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 7 )

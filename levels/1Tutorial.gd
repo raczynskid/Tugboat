@@ -7,7 +7,7 @@ onready var ui_controls = get_node("Message")
 onready var current_stage = 1
 onready var messages = {
 						1 : "Hey there Captain! Welcome to Tugboat!", 
-						2 : "To move around, use arrow keys",
+						2 : "To set your speed, use up and down. Steer with left and right arrows.",
 						3 : "Great job! Now set sail to the designated area.",
 						4 : "Amazing! The goal of the game is to deliver cargo to points like these. Push the barge into the new target area!",
 						5 : "You can also use your tow cable to pull barges into position. Touch the barge with the tow cable to automatically attach.",
@@ -26,7 +26,7 @@ func _ready():
 	ui_controls.visible = true
 	ui_controls.change_text(messages[1])
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	match current_stage:
 		1:
 			if Input.is_action_just_pressed("ui_accept"):

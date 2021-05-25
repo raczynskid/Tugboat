@@ -14,7 +14,7 @@ func _ready():
 	ui_controls.visible = true
 	ui_controls.change_text(messages[1])
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	match current_stage:
 		1:
 			var chain = level_controls.get_node("Chain")

@@ -3,11 +3,11 @@
 [ext_resource path="res://fonts/candy-crayon/CandyCrayon - Copy.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://interfaces/message.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
 
-[sub_resource type="Theme" id=6]
-default_font = SubResource( 5 )
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
@@ -29,7 +29,7 @@ margin_left = 31.0
 margin_top = 42.0
 margin_right = 993.0
 margin_bottom = 164.0
-theme = SubResource( 6 )
+theme = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -29,7 +29,7 @@ transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0
 
 [node name="WarehouseDispenser" parent="Harbor" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.48927, -19.532 )
-drop_delay = 500
+drop_delay = 300
 
 [node name="harbor_base" parent="Harbor" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80034, 3.14745, -23.9194 )

@@ -4,11 +4,12 @@ onready var player = Global.Player
 onready var unload_area = load("res://world_objects/gameplay_objects/unload_area.tscn")
 onready var barge = load("res://player_objects/barge/Barge.tscn")
 onready var message_ui = get_node("Message")
+onready var cargo_counter = get_node("cameras/main_camera/indicator")
 
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func spawn_barge(x,y,z):
@@ -23,3 +24,9 @@ func spawn_unload_area(x,y,z):
 	
 func show_msg(message):
 	message_ui.change_text(message)
+
+func increase_cargo_counter():
+	cargo_counter.increase_bar()
+
+func decrease_cargo_counter():
+	cargo_counter.decrease_bar()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/barge/Barge.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://world_objects/harbor_props/blue_cargo.tscn" type="PackedScene" id=10]
 [ext_resource path="res://world_objects/harbor_props/truck.tscn" type="PackedScene" id=11]
 [ext_resource path="res://world_objects/road/road.tscn" type="PackedScene" id=12]
+[ext_resource path="res://world_objects/bridge/Bridge.tscn" type="PackedScene" id=13]
+[ext_resource path="res://world_objects/gameplay_objects/unload_area.tscn" type="PackedScene" id=14]
 
 [node name="EnvironmentTutorial" type="Spatial"]
 script = ExtResource( 4 )
@@ -34,6 +36,48 @@ drop_delay = 300
 [node name="harbor_base" parent="Harbor" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80034, 3.14745, -23.9194 )
 
+[node name="harbor_base5" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8832, 3.14745, 4.0037 )
+
+[node name="harbor_base6" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.387, 3.14745, 4.06382 )
+
+[node name="harbor_base9" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -55.5409, 3.14745, -27.3269 )
+
+[node name="harbor_base17" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -46.9132, 3.14745, -35.9547 )
+
+[node name="harbor_base10" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -64.375, 3.147, -18.5438 )
+
+[node name="harbor_base11" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -73.0931, 3.14745, -9.84422 )
+
+[node name="harbor_base12" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -81.9221, 3.14745, -1.03701 )
+
+[node name="harbor_base13" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.715522, 0, -0.69859, 0, 1, 0, 0.69859, 0, 0.715522, -46.7604, 3.14745, 33.8543 )
+
+[node name="harbor_base14" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.715522, 0, -0.69859, 0, 1, 0, 0.69859, 0, 0.715522, -55.6487, 3.147, 25.126 )
+
+[node name="harbor_base15" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.715522, 0, -0.69859, 0, 1, 0, 0.69859, 0, 0.715522, -64.452, 3.14745, 16.5127 )
+
+[node name="harbor_base18" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( -0.679057, 0, -0.734086, 0, 1, 0, 0.734086, 0, -0.679057, -55.5409, 3.14745, 25.7651 )
+
+[node name="harbor_base19" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( -0.679057, 0, -0.734086, 0, 1, 0, 0.734086, 0, -0.679057, -47.0553, 3.147, 16.6448 )
+
+[node name="harbor_base20" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( -0.679057, 0, -0.734086, 0, 1, 0, 0.734086, 0, -0.679057, -38.6823, 3.14745, 7.61263 )
+
+[node name="harbor_base16" parent="Harbor" instance=ExtResource( 6 )]
+transform = Transform( 0.715522, 0, -0.69859, 0, 1, 0, 0.69859, 0, 0.715522, -73.3643, 3.14745, 7.7897 )
+
 [node name="harbor_base2" parent="Harbor" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3916, 3.14745, -23.9194 )
 
@@ -41,7 +85,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3916, 3.14745, -23.9194 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.993, 3.14745, -23.8544 )
 
 [node name="harbor_base4" parent="Harbor" instance=ExtResource( 6 )]
-transform = Transform( 9.102, 0, 0, 0, 1, 0, 0, 0, 3, 17.2637, 3.14745, -53.6656 )
+transform = Transform( 9.102, 0, 0, 0, 1, 0, 0, 0, 3.979, 0.279531, 3.14745, -54.9226 )
 
 [node name="fuel_tank" parent="Harbor" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.27792, 6.06145, -23.9265 )
@@ -89,7 +133,7 @@ transform = Transform( 0.35827, 0, -0.933618, 0, 1, 0, 0.933618, 0, 0.35827, 8.7
 transform = Transform( 0.963663, 0, -0.267121, 0, 1, 0, 0.267121, 0, 0.963663, 21.1427, 6.01892, -24.3318 )
 
 [node name="truck" parent="Harbor" instance=ExtResource( 11 )]
-transform = Transform( 0.611002, 0, 0.791629, 0, 1, 0, -0.791629, 0, 0.611002, 12.0638, 6.10287, -21.5258 )
+transform = Transform( 0.611002, 0, 0.791629, 0, 1, 0, -0.791629, 0, 0.611002, 12.8816, 6.10287, -26.3926 )
 
 [node name="truck2" parent="Harbor" instance=ExtResource( 11 )]
 transform = Transform( 0.999998, 0, -0.00200701, 0, 1, 0, 0.00200701, 0, 0.999998, 31.6912, 6.10287, -38.8102 )
@@ -102,3 +146,9 @@ transform = Transform( 0.999998, 0, -0.00200701, 0, 1, 0, 0.00200701, 0, 0.99999
 
 [node name="Road" parent="Harbor" instance=ExtResource( 12 )]
 transform = Transform( -2.99998, 0, 0.0113102, 0, 3, 0, -0.0113102, 0, -2.99998, 16.9101, 4.6828, -32.8326 )
+
+[node name="Bridge" parent="Harbor" instance=ExtResource( 13 )]
+transform = Transform( 0.0131943, 0, 1.99996, 0, 2, 0, -1.99996, 0, 0.0131943, -25.4423, 0.99794, -17.9382 )
+
+[node name="Unload" parent="." instance=ExtResource( 14 )]
+transform = Transform( 0.999739, 0, 0.0228444, 0, 1, 0, -0.0228444, 0, 0.999739, -33.6421, 1.68454, 45.2754 )

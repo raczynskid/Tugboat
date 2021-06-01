@@ -6,11 +6,13 @@ onready var barge = load("res://player_objects/barge/Barge.tscn")
 onready var message_ui = get_node("Message")
 onready var cargo_counter = get_node("cameras/main_camera/indicator")
 
+onready var vehicle_paths = get_parent().get_node_or_null("VehiclesMisc")
+
 func _ready():
 	pass
 
-func _process(_delta):
-	pass
+func _process(delta):
+	move_vehicles(delta)
 
 func spawn_barge(x,y,z):
 	add_child(barge.instance())
@@ -30,3 +32,10 @@ func increase_cargo_counter():
 
 func decrease_cargo_counter():
 	cargo_counter.decrease_bar()
+
+func move_vehicles(delta):
+	if vehicle_paths != null:
+		for vehicle_path in vehicle_paths.get_children():
+			var follow = vehicle_path.get_node("PathFollow")
+			var vehicle = follow.get_children()[0]
+			follow.offset += delta * vehicle.speed

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/barge/Barge.tscn" type="PackedScene" id=2]
@@ -14,6 +14,13 @@
 [ext_resource path="res://world_objects/road/road.tscn" type="PackedScene" id=12]
 [ext_resource path="res://world_objects/bridge/Bridge.tscn" type="PackedScene" id=13]
 [ext_resource path="res://world_objects/gameplay_objects/unload_area.tscn" type="PackedScene" id=14]
+[ext_resource path="res://world_objects/harbor_props/excavator.tscn" type="PackedScene" id=15]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -0.988186, -5.72205e-06, -0.474322, 0, 0, 0, 0, 0, 0, -0.988186, -5.72205e-06, -0.474322, 0, 0, 0, 0, 0, 0, -0.988186, -5.72205e-06, -0.474322, 0, 0, 0, 0, 0, 0, -10.1416, 0, 4.98634, 0, 0, 0, 0, 0, 0, -21.1758, -4.76837e-06, 16.4661, 0, 0, 0, 0, 0, 0, -27.3128, -4.76837e-06, 18.9663, 0, 0, 0, 0, 0, 0, -32.1807, -4.76837e-06, 15.8789, 0, 0, 0, 0, 0, 0, -48.6339, -4.76837e-06, -1.26337, 0, 0, 0, 0, 0, 0, -51.9107, -4.76837e-06, -6.28279, 0, 0, 0, 0, 0, 0, -50.4522, -4.76837e-06, -11.681, 0, 0, 0, 0, 0, 0, -23.394, -4.76837e-06, -41.9654, 0, 0, 0, 0, 0, 0, -18.867, -4.76837e-06, -49.4472, 0, 0, 0, 0, 0, 0, -18.0336, -4.76837e-06, -55.6599, 0, 0, 0, 0, 0, 0, -19.7952, -4.76837e-06, -62.7628, 0, 0, 0, 0, 0, 0, -14.8136, -4.76837e-06, -65.282, 0, 0, 0, 0, 0, 0, -9.07444, -4.76837e-06, -61.3233, 0, 0, 0, 0, 0, 0, -12.0103, -4.76837e-06, -55.4326, 0, 0, 0, 0, 0, 0, -12.8816, -4.76837e-06, -47.4394, 0, 0, 0, 0, 0, 0, -15.8355, 0, -41.5684, 0, 0, 0, 0, 0, 0, -40.4773, 0, -15.8399, 0, 0, 0, 0, 0, 0, -45.1297, -4.76837e-06, -11.0181, 0, 0, 0, 0, 0, 0, -47.8194, -4.76837e-06, -5.90396, 0, 0, 0, 0, 0, 0, -44.5804, -4.76837e-06, -0.695133, 0, 0, 0, 0, 0, 0, -31.2147, -4.76837e-06, 11.2383, 0, 0, 0, 0, 0, 0, -26.2521, -4.76837e-06, 13.7386, 0, 0, 0, 0, 0, 0, -19.528, -4.76837e-06, 10.0829, 0, 0, 0, 0, 0, 0, -9.95079, 0, -1.88204, 0, 0, 0, 0, 0, 0, -0.988186, -5.72205e-06, -0.474322 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
 
 [node name="EnvironmentTutorial" type="Spatial"]
 script = ExtResource( 4 )
@@ -152,3 +159,17 @@ transform = Transform( 0.0131943, 0, 1.99996, 0, 2, 0, -1.99996, 0, 0.0131943, -
 
 [node name="Unload" parent="." instance=ExtResource( 14 )]
 transform = Transform( 0.999739, 0, 0.0228444, 0, 1, 0, -0.0228444, 0, 0.999739, -33.6421, 1.68454, 45.2754 )
+
+[node name="VehiclesMisc" type="Spatial" parent="."]
+
+[node name="Path" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -16.5704, 6.07549, 25.8236 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path"]
+transform = Transform( 0.512329, 4.61043e-07, -0.858787, -1.42109e-14, 1, 5.36851e-07, 0.85879, -2.75045e-07, 0.512327, -0.988186, -5.72205e-06, -0.474322 )
+rotation_mode = 4
+
+[node name="Excavator" parent="VehiclesMisc/Path/PathFollow" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, -2.98023e-08, 0, 1, -1.13687e-13, 0, 0, 1, 0.891158, -0.218297, -0.00877953 )
+speed = 3.0

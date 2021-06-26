@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world_objects/gameplay_objects/ice_patch/ice_patch_mesh1.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 1.54274
+
+[node name="IcePath" type="StaticBody"]
+process_priority = 4
+collision_layer = 3
+collision_mask = 3
+
+[node name="ice_patch_mesh1" parent="." instance=ExtResource( 1 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0948739, 0, -0.00553441 )
+shape = SubResource( 1 )

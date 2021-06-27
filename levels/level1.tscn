@@ -5,7 +5,32 @@
 
 [node name="Level1" type="Spatial"]
 
-[node name="IcePath2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -6.60839, 2.36194, -15.6425 )
+[node name="LevelBorders" type="Spatial" parent="."]
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
+
+[node name="IcePatches" type="Spatial" parent="."]
+
+[node name="IcePath2" parent="IcePatches" instance=ExtResource( 2 )]
+process_priority = -2
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -6.42625, 2.36194, -15.6799 )
+
+[node name="IcePath3" parent="IcePatches" instance=ExtResource( 2 )]
+process_priority = -2
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 31.6427, 2.36194, -15.6799 )
+
+[node name="IcePath4" parent="IcePatches" instance=ExtResource( 2 )]
+process_priority = -2
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 19.988, 2.36194, -15.6799 )
+
+[node name="IcePath5" parent="IcePatches" instance=ExtResource( 2 )]
+process_priority = -2
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.75187, 2.36194, -15.6799 )
+
+[editable path="Level"]
+[editable path="Level/Chain"]
+[editable path="Level/Chain/ChainLink"]
+[editable path="Level/Chain/ChainLink2"]
+[editable path="Level/Chain/ChainLink3"]
+[editable path="Level/Chain/ChainLink4"]
+[editable path="Level/Chain/ChainLink5"]

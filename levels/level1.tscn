@@ -5,8 +5,8 @@
 
 [sub_resource type="Curve3D" id=1]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -5.95997, 0, 5.47737, 0, 0, 0, 0, 0, 0, -9.38101, 0, 14.6001, 0, 0, 0, 0, 0, 0, -4.77004, 0, 18.5666, 0, 0, 0, 0, 0, 0, 2.36952, 0, 18.5666, 0, 0, 0, 0, 0, 0, 7.87293, 0, 12.7657, 0, 0, 0, 0, 0, 0, 5.6914, 0, 5.08073, 0, 0, 0, 0, 0, 0, -5.95997, 0, 5.47737 ),
-"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0 )
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -6.04598, -0.0706993, 5.87812, 0, 0, 0, 0, 0, 0, 30.0426, 0.141837, 0.549189, 0, 0, 0, 0, 0, 0, -6.04598, -0.0706993, 5.87812 ),
+"tilts": PoolRealArray( 0, 0, 0 )
 }
 
 [node name="Level1" type="Spatial"]
@@ -18,7 +18,7 @@ _data = {
 [node name="VehiclesMisc" type="Spatial" parent="."]
 
 [node name="Path" type="Path" parent="VehiclesMisc"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10704, 1.91976, -11.0251 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64998, 1.91976, -11.0251 )
 curve = SubResource( 1 )
 
 [node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path"]

@@ -162,17 +162,18 @@ void light() {
 
 [sub_resource type="NoiseTexture" id=3]
 resource_local_to_scene = true
+as_normalmap = true
 noise = SubResource( 2 )
 
 [resource]
 render_priority = -3
 shader = SubResource( 1 )
-shader_param/FresnelPower = 2.5
-shader_param/FresnelColor = Color( 0.0666667, 0.854902, 0.92549, 1 )
-shader_param/Color = Color( 0.12549, 0.34902, 0.796078, 1 )
+shader_param/FresnelPower = 1.0
+shader_param/FresnelColor = Color( 0.317647, 0.815686, 0.921569, 1 )
+shader_param/Color = Color( 0.819608, 0.862745, 0.952941, 1 )
 shader_param/Tiling = Vector3( 1, 1, 0 )
 shader_param/Offset = Vector3( 0, 0, 0 )
-shader_param/RefractionAmount = 1.0
+shader_param/RefractionAmount = 0.0
 shader_param/Metallic = 0.134
 shader_param/Smoothness = 0.627
 shader_param/Normals = 0.77

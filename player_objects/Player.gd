@@ -41,5 +41,5 @@ func clamp_vector(vector : Vector3, min_val, max_val):
 	return vector
 	
 func buoyancy():
-	if(transform.origin.y < base_buoyancy):
-		transform.origin.y += 0.01
+	if(transform.origin.y != base_buoyancy):
+		transform.origin.y = base_buoyancy

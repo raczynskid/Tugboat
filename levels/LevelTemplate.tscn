@@ -33,7 +33,7 @@ transform = Transform( 0.0999999, 0, -8.14907e-10, 5.82077e-11, 0.1, 4.78485e-09
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.745, -2.55, -20 )
 
 [node name="water" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.69659, 0 )

@@ -19,6 +19,8 @@ func _physics_process(delta):
 	get_input(delta)
 	buoyancy()
 	velocity = move_and_slide(velocity, Vector3.UP)
+	# if colliding, decrease speed
+	current_speed -= abs(velocity[1] / 5)
 
 func get_input(delta):
 	velocity = Vector3.ZERO
@@ -41,5 +43,5 @@ func clamp_vector(vector : Vector3, min_val, max_val):
 	return vector
 	
 func buoyancy():
-	if(transform.origin.y < base_buoyancy):
-		transform.origin.y += 0.01
+	if(transform.origin.y != base_buoyancy):
+		transform.origin.y = base_buoyancy

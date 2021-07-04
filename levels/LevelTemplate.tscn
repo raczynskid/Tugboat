@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://interfaces/message.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world_objects/gameplay_objects/main_camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://interfaces/gauges/speed_gauge.tscn" type="PackedScene" id=7]
+[ext_resource path="res://interfaces/pause_menu.tscn" type="PackedScene" id=8]
 [ext_resource path="res://interfaces/barge_load_indicator.tscn" type="PackedScene" id=9]
 
 [node name="Level" type="Spatial"]
@@ -48,6 +49,11 @@ nodes/node_b = NodePath("../../../Player")
 nodes/node_a = NodePath("")
 
 [node name="Message" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource( 8 )]
 visible = false
 
 [connection signal="locked_to_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_locked_to_barge"]

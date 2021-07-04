@@ -9,8 +9,8 @@
 
 [sub_resource type="Curve3D" id=1]
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -6.04598, -0.0706993, 5.87812, 0, 0, 0, 0, 0, 0, 30.0426, 0.141837, 0.549189, 0, 0, 0, 0, 0, 0, -6.04598, -0.0706993, 5.87812 ),
-"tilts": PoolRealArray( 0, 0, 0 )
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 0.696946, -5.96046e-06, 10.4643, 0, 0, 0, 0, 0, 0, 0.20115, -5.96046e-06, 14.9761, 0, 0, 0, 0, 0, 0, -2.32745, -5.96046e-06, 17.6039, 0, 0, 0, 0, 0, 0, -6.19472, -5.96046e-06, 18.9425, 0, 0, 0, 0, 0, 0, -9.86367, -5.96046e-06, 18.6946, 0, 0, 0, 0, 0, 0, -12.1444, -5.96046e-06, 17.6039, 0, 0, 0, 0, 0, 0, -14.1276, -5.96046e-06, 14.9761, 0, 0, 0, 0, 0, 0, -15.2184, -5.96046e-06, 11.1584, 0, 0, 0, 0, 0, 0, -14.1276, -5.96046e-06, 8.53067, 0, 0, 0, 0, 0, 0, -11.7973, -5.96046e-06, 6.10123, 0, 0, 0, 0, 0, 0, -3.76528, -5.96046e-06, 5.65501, 0, 0, 0, 0, 0, 0, 0.696946, -5.96046e-06, 10.4643 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 }
 
 [node name="Level1" type="Spatial"]
@@ -22,24 +22,95 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, -43.5715, 4.03612, -43.7857
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
-[node name="Player" parent="Level" index="4"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.69659, 0 )
-
-[node name="Chain" parent="Level" index="5"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.73843, 2.55343, 0.0918608 )
-
 [node name="VehiclesMisc" type="Spatial" parent="."]
 
 [node name="Path" type="Path" parent="VehiclesMisc"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64998, 1.91976, -11.0251 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1823, 1.91976, -17.3714 )
 curve = SubResource( 1 )
 
 [node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path"]
-transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, -6.04598, -0.0706993, 5.87812 )
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
 rotation_mode = 0
 
 [node name="IcePath" parent="VehiclesMisc/Path/PathFollow" instance=ExtResource( 2 )]
-speed = 5.0
+speed = 2.0
+
+[node name="Path2" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.812389, 0, -0.583116, 0, 1, 0, 0.583116, 0, 0.812389, -50.2479, 1.91976, -25.7505 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path2"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path2/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path3" type="Path" parent="VehiclesMisc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.4615, 1.91976, -44.4919 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path3"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path3/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path4" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.807918, 0, -0.589295, 0, 1, 0, 0.589295, 0, 0.807918, -79.6986, 1.91976, -23.7673 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path4"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path4/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path5" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.721905, 0, -0.691992, 0, 1, 0, 0.691992, 0, 0.721905, -56.5942, 1.91976, -4.92672 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path5"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path5/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path6" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.99116, 0, 0.132672, 0, 1, 0, -0.132672, 0, 0.99116, -66.3615, 1.91976, -18.5613 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path6"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path6/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path7" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.829418, 0, 0.558628, 0, 1, 0, -0.558628, 0, 0.829418, -64.7254, 1.91976, -22.2303 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path7"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path7/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path8" type="Path" parent="VehiclesMisc"]
+transform = Transform( -0.0282183, 0, -0.999602, 0, 1, 0, 0.999602, 0, -0.0282183, -64.7254, 1.91976, -22.2303 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path8"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path8/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
 
 [node name="Barge" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2477, 3.24618, 0 )
@@ -55,11 +126,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84007, 5.83036, 0 )
 
 [node name="Unload" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.956213, 0, -0.292672, 0, 1, 0, 0.292672, 0, 0.956213, 19.1373, 2.31675, -57.5885 )
-
-[editable path="Level"]
-[editable path="Level/Chain"]
-[editable path="Level/Chain/ChainLink"]
-[editable path="Level/Chain/ChainLink2"]
-[editable path="Level/Chain/ChainLink3"]
-[editable path="Level/Chain/ChainLink4"]
-[editable path="Level/Chain/ChainLink5"]

@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/east-sea-dokdo/EastSeaDokdo-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://interfaces/pause_menu.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="pause_menu" type="Control"]
+anchor_right = 0.887
+anchor_bottom = 0.604
+margin_left = 202.0
+margin_bottom = 237.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.434
+anchor_top = 0.246
+anchor_right = 0.434
+anchor_bottom = 0.246
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 85.0
+margin_bottom = 135.0
+theme = SubResource( 2 )
+custom_constants/separation = 12
+
+[node name="Restart" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_right = 85.0
+margin_bottom = 37.0
+text = "Restart"
+align = 2
+
+[node name="Options" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 49.0
+margin_right = 85.0
+margin_bottom = 86.0
+text = "Options"
+
+[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 98.0
+margin_right = 85.0
+margin_bottom = 135.0
+text = "Exit"
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+margin_left = 89.0
+margin_right = 89.0
+margin_bottom = 135.0
+
+[connection signal="button_up" from="HBoxContainer/VBoxContainer/Restart" to="." method="_on_Restart_button_up"]

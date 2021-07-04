@@ -12,8 +12,7 @@ func _ready():
 		rot_dir = 1
 	else:
 		rot_dir = -1
-	print(random_seed)
+	
 
 func _process(delta):
 	rotate(Vector3(0,1,0), (rotation_speed * 0.1 * rot_dir) * delta)
-	

@@ -5,6 +5,7 @@ onready var unload_area = load("res://world_objects/gameplay_objects/unload_area
 onready var barge = load("res://player_objects/barge/Barge.tscn")
 onready var message_ui = get_node("Message")
 onready var cargo_counter = get_node("cameras/main_camera/indicator")
+onready var pause_menu = get_node("CanvasLayer/pause_menu")
 
 onready var vehicle_paths = get_parent().get_node_or_null("VehiclesMisc")
 
@@ -13,6 +14,8 @@ func _ready():
 
 func _process(delta):
 	move_vehicles(delta)
+	if Input.is_action_just_pressed("ui_cancel"):
+		toggle_pause_menu()
 
 func spawn_barge(x,y,z):
 	add_child(barge.instance())
@@ -39,3 +42,9 @@ func move_vehicles(delta):
 			var follow = vehicle_path.get_node("PathFollow")
 			var vehicle = follow.get_children()[0]
 			follow.offset += delta * vehicle.speed
+
+func toggle_pause_menu():
+		if pause_menu.visible:
+			pause_menu.visible = false
+		else:
+			pause_menu.visible = true

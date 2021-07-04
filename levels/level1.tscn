@@ -56,9 +56,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.84007, 5.83036, 0 )
 [node name="Unload" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.956213, 0, -0.292672, 0, 1, 0, 0.292672, 0, 0.956213, 19.1373, 2.31675, -57.5885 )
 
-[connection signal="locked_to_barge" from="Level/Chain/ChainLink5/BargeHook" to="Level/Chain" method="_on_BargeHook_locked_to_barge"]
-[connection signal="unlocked_from_barge" from="Level/Chain/ChainLink5/BargeHook" to="Level/Chain" method="_on_BargeHook_unlocked_from_barge"]
-
 [editable path="Level"]
 [editable path="Level/Chain"]
 [editable path="Level/Chain/ChainLink"]

@@ -19,6 +19,8 @@ func _physics_process(delta):
 	get_input(delta)
 	buoyancy()
 	velocity = move_and_slide(velocity, Vector3.UP)
+	# if colliding, decrease speed
+	current_speed -= abs(velocity[1] / 5)
 
 func get_input(delta):
 	velocity = Vector3.ZERO

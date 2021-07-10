@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://effects/target_area.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world_objects/warehouse/WarehouseCargoDispenser.gd" type="Script" id=2]
+[ext_resource path="res://world_objects/gameplay_objects/CargoCrane.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 6.08351, 7.26247, 4.98211 )
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 20.5589, 26.5571, 19.9048 )
+
+[node name="CraneDispenser" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.94868, 6.57311 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00935173, 2.7409, -0.0614367 )
+shape = SubResource( 2 )
+
+[node name="TargetArea" parent="Area" instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 1.52421, -1.63857 )
+idle_color = Color( 0.0588235, 0.0352941, 0.815686, 1 )
+
+[node name="CargoCrane" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -4.577, 0, -3.01038 )
+
+[node name="StaticBody" type="StaticBody" parent="CargoCrane"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2087, -5.56977, -4.92138 )
+
+[node name="CollisionShape" type="CollisionShape" parent="CargoCrane/StaticBody"]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

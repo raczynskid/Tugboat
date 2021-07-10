@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://world_objects/gameplay_objects/ice_patch/ice_patch_mesh1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://world_objects/ice_props/igloo_mesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://world_objects/ice_props/cloth_cover.tscn" type="PackedScene" id=3]
+[ext_resource path="res://world_objects/warehouse/CraneCargoDispenser.tscn" type="PackedScene" id=4]
+[ext_resource path="res://world_objects/harbor_props/harbor_base.tscn" type="PackedScene" id=5]
+
+[node name="IcyHarbor" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.3635, 0 )
+
+[node name="harbor_base" parent="." instance=ExtResource( 5 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+
+[node name="ice_patch_mesh1" parent="harbor_base" instance=ExtResource( 1 )]
+transform = Transform( 3.668, 0, 0, 0, 1.74, 0, 0, 0, 3.56, 0.507315, 1.73977, 0 )
+
+[node name="igloo_mesh" parent="harbor_base" instance=ExtResource( 2 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.78567, 2.02352, 0 )
+
+[node name="cloth_cover" parent="harbor_base" instance=ExtResource( 3 )]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 2.78567, 2.30724, 0 )
+
+[node name="CraneDispenser" parent="harbor_base" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44772, 0.828059, 3.46627 )
+drop_delay = 300
+drop_countdown = 2

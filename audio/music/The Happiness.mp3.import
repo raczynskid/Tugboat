@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Happiness.mp3-2ee2ee5ca9f82e2b42c4a05243cb6512.mp3str"
+
+[deps]
+
+source_file="res://audio/music/The Happiness.mp3"
+dest_files=[ "res://.import/The Happiness.mp3-2ee2ee5ca9f82e2b42c4a05243cb6512.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Smooth.mp3-7db7424ff3fd19906b8a1788f83e7e26.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Smooth.mp3"
+dest_files=[ "res://.import/Smooth.mp3-7db7424ff3fd19906b8a1788f83e7e26.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

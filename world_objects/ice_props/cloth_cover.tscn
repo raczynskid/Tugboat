@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://world_objects/ice_props/cloth_cover.gltf" type="PackedScene" id=1]
+[ext_resource path="res://interfaces/gauges/cargo_gauge_body.gltf" type="PackedScene" id=2]
+
+[node name="cloth_cover" instance=ExtResource( 1 )]
+
+[node name="cargo_gauge_body" parent="." index="2" instance=ExtResource( 2 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -33, 4.52114, 22 )
+
+[node name="cargo_gauge_body2" parent="." index="3" instance=ExtResource( 2 )]
+transform = Transform( 3.65492, 0, 3.41197, 0, 5, 0, -3.41197, 0, 3.65492, -22.107, 4.52114, 30.3634 )
+
+[node name="cargo_gauge_body3" parent="." index="4" instance=ExtResource( 2 )]
+transform = Transform( 4.76307, 0, 1.52091, 0, 5, 0, -1.52091, 0, 4.76307, -47.7261, 4.52115, 29.0036 )
+
+[node name="cargo_gauge_body4" parent="." index="5" instance=ExtResource( 2 )]
+transform = Transform( 4.76307, 0, 1.52091, 0, 5, 0, -1.52091, 0, 4.76307, -3.92016, 4.52114, -30.5892 )
+
+[node name="cargo_gauge_body5" parent="." index="6" instance=ExtResource( 2 )]
+transform = Transform( 4.76307, 0, 1.52091, 0, 5, 0, -1.52091, 0, 4.76307, -37.7387, 4.52113, -32.8162 )

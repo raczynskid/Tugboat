@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ukulele_Children.mp3-82df94182aa2b661a6b9a5abb485611c.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Ukulele_Children.mp3"
+dest_files=[ "res://.import/Ukulele_Children.mp3-82df94182aa2b661a6b9a5abb485611c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

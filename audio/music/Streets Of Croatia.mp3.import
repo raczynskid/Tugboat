@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Streets Of Croatia.mp3-15030e9a18c73d12d0b66ae9e150ed53.mp3str"
+
+[deps]
+
+source_file="res://audio/music/Streets Of Croatia.mp3"
+dest_files=[ "res://.import/Streets Of Croatia.mp3-15030e9a18c73d12d0b66ae9e150ed53.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -35,17 +35,6 @@ rotation_mode = 0
 [node name="IcePath" parent="VehiclesMisc/Path/PathFollow" instance=ExtResource( 2 )]
 speed = 2.0
 
-[node name="Path2" type="Path" parent="VehiclesMisc"]
-transform = Transform( 0.812389, 0, -0.583116, 0, 1, 0, 0.583116, 0, 0.812389, -50.2479, 1.91976, -25.7505 )
-curve = SubResource( 1 )
-
-[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path2"]
-transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
-rotation_mode = 0
-
-[node name="IcePath" parent="VehiclesMisc/Path2/PathFollow" instance=ExtResource( 2 )]
-speed = 2.0
-
 [node name="Path3" type="Path" parent="VehiclesMisc"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.4615, 1.91976, -44.4919 )
 curve = SubResource( 1 )
@@ -79,17 +68,6 @@ rotation_mode = 0
 [node name="IcePath" parent="VehiclesMisc/Path5/PathFollow" instance=ExtResource( 2 )]
 speed = 2.0
 
-[node name="Path6" type="Path" parent="VehiclesMisc"]
-transform = Transform( 0.99116, 0, 0.132672, 0, 1, 0, -0.132672, 0, 0.99116, -66.3615, 1.91976, -18.5613 )
-curve = SubResource( 1 )
-
-[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path6"]
-transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
-rotation_mode = 0
-
-[node name="IcePath" parent="VehiclesMisc/Path6/PathFollow" instance=ExtResource( 2 )]
-speed = 2.0
-
 [node name="Path7" type="Path" parent="VehiclesMisc"]
 transform = Transform( 0.829418, 0, 0.558628, 0, 1, 0, -0.558628, 0, 0.829418, -64.7254, 1.91976, -22.2303 )
 curve = SubResource( 1 )
@@ -110,6 +88,40 @@ transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922,
 rotation_mode = 0
 
 [node name="IcePath" parent="VehiclesMisc/Path8/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path9" type="Path" parent="VehiclesMisc"]
+transform = Transform( 0.659844, 0, -0.751403, 0, 1, 0, 0.751403, 0, 0.659844, -49.2829, 1.91976, -80.6169 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path9"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path9/PathFollow" instance=ExtResource( 2 )]
+speed = 2.0
+
+[node name="Path10" type="Path" parent="VehiclesMisc"]
+transform = Transform( -0.0282183, 0, -0.999602, 0, 1, 0, 0.999602, 0, -0.0282183, -30.4263, 1.91976, -93.0394 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path10"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path10/PathFollow" instance=ExtResource( 2 )]
+transform = Transform( 0.250752, 0, 0.968051, 0, 1, 0, -0.968051, 0, 0.250752, 0, 0, 0 )
+speed = 2.0
+
+[node name="Path11" type="Path" parent="VehiclesMisc"]
+transform = Transform( -0.865676, 0, -0.500605, 0, 1, 0, 0.500605, 0, -0.865676, -18.2414, 1.91976, -67.012 )
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="VehiclesMisc/Path11"]
+transform = Transform( -0.410922, 0, -0.911671, 0, 1, 0, 0.911671, 0, -0.410922, 0.696946, -5.96046e-06, 10.4643 )
+rotation_mode = 0
+
+[node name="IcePath" parent="VehiclesMisc/Path11/PathFollow" instance=ExtResource( 2 )]
 speed = 2.0
 
 [node name="Barge" parent="." instance=ExtResource( 4 )]

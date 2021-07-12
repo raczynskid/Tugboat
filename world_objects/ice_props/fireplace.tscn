@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://effects/smoke.tscn" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.372549, 0.262745, 0.0588235, 1 )
+
+[sub_resource type="CylinderMesh" id=2]
+material = SubResource( 1 )
+radial_segments = 8
+
+[sub_resource type="ParticlesMaterial" id=3]
+lifetime_randomness = 0.85
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3( 0, 10, 0 )
+scale_random = 0.54
+hue_variation = 1.0
+hue_variation_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.760784, 0.0666667, 0.0666667, 1 )
+emission_enabled = true
+emission = Color( 0.827451, 0.592157, 0.207843, 1 )
+emission_energy = 0.2
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SphereMesh" id=4]
+material = SubResource( 5 )
+radius = 0.3
+height = 0.5
+radial_segments = 12
+rings = 6
+
+[node name="Fireplace" type="Spatial"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.000476501, -2, -0.0003486, 0.5, 0.00190548, 0.00018744, -0.000187104, -0.00139512, 0.5, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( -7.96327e-09, -0.728713, 0.46563, 0.5, -8.74228e-08, 0, 2.03533e-08, 1.86252, 0.182178, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1.47702e-07, 1.316, 0.411692, 0.5, -1.20715e-06, 0, 2.14306e-07, 1.90943, -0.283742, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Fire" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0165033, 1.14716, -0.0406361 )
+amount = 80
+lifetime = 0.43
+preprocess = 1.0
+visibility_aabb = AABB( -0.722508, -1.78342, -1.25221, 1.44502, 3.56684, 2.50441 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 4 )
+
+[node name="Particles" parent="Fire" instance=ExtResource( 1 )]

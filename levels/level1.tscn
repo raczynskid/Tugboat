@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world_objects/gameplay_objects/ice_patch/ice_path.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://world_objects/gameplay_objects/unload_area.tscn" type="PackedScene" id=6]
 [ext_resource path="res://audio/music/Ukulele_Children.mp3" type="AudioStream" id=7]
 [ext_resource path="res://world_objects/ice_props/icy_harbor.tscn" type="PackedScene" id=8]
+[ext_resource path="res://world_objects/ice_props/fireplace.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -145,3 +146,6 @@ transform = Transform( 0.0838566, 0, 0.05448, 0, 0.1, 0, -0.05448, 0, 0.0838566,
 
 [node name="igloo_mesh2" parent="." instance=ExtResource( 5 )]
 transform = Transform( -0.0692551, 0, 0.0854619, 0, 0.11, 0, -0.0854619, 0, -0.0692551, -89.485, 3.27941, -38.5194 )
+
+[node name="Fireplace" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -85.0524, 2.98544, -43.2139 )

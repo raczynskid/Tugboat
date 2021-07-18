@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world_objects/gameplay_objects/ice_patch/ice_path.tscn" type="PackedScene" id=2]
@@ -6,9 +6,10 @@
 [ext_resource path="res://player_objects/barge/Barge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://world_objects/ice_props/igloo_mesh.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world_objects/gameplay_objects/unload_area.tscn" type="PackedScene" id=6]
-[ext_resource path="res://audio/music/Ukulele_Children.mp3" type="AudioStream" id=7]
+[ext_resource path="res://audio/music/MusicPlayer.tscn" type="PackedScene" id=7]
 [ext_resource path="res://world_objects/ice_props/icy_harbor.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world_objects/ice_props/fireplace.tscn" type="PackedScene" id=9]
+[ext_resource path="res://world_objects/ice_props/snow_tree.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -130,22 +131,56 @@ speed = 2.0
 [node name="Barge" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2477, 3.24618, 0 )
 
+[node name="Props" type="Spatial" parent="."]
+
+[node name="igloo_mesh" parent="Props" instance=ExtResource( 5 )]
+transform = Transform( 0.0838566, 0, 0.05448, 0, 0.1, 0, -0.05448, 0, 0.0838566, -89.485, 2.83142, -47.9977 )
+
+[node name="igloo_mesh2" parent="Props" instance=ExtResource( 5 )]
+transform = Transform( -0.0692551, 0, 0.0854619, 0, 0.11, 0, -0.0854619, 0, -0.0692551, -89.485, 3.27941, -38.5194 )
+
+[node name="Fireplace" parent="Props" instance=ExtResource( 9 )]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -85.0524, 2.98544, -43.2139 )
+
+[node name="Spatial" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.78044, 8.00639, -24.8449 )
+
+[node name="Spatial2" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( 0.413736, 0, 0.280753, 0, 0.5, 0, -0.280753, 0, 0.413736, -12.3131, 8.64971, -27.6039 )
+
+[node name="Spatial3" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.338393, 0, 0.36809, 0, 0.5, 0, -0.36809, 0, -0.338393, -14.9404, 8.64971, -27.9082 )
+
+[node name="Spatial4" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.106234, 0, -0.488584, 0, 0.5, 0, 0.488584, 0, -0.106234, -5.6966, 8.37894, -25.3723 )
+
+[node name="Spatial5" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.9665, 4.67625, 25.2645 )
+
+[node name="Spatial6" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( 0.413736, 0, 0.280753, 0, 0.5, 0, -0.280753, 0, 0.413736, 9.4338, 5.31957, 22.5056 )
+
+[node name="Spatial7" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.338393, 0, 0.36809, 0, 0.5, 0, -0.36809, 0, -0.338393, 6.80647, 5.31957, 22.2012 )
+
+[node name="Spatial8" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.106234, 0, -0.488584, 0, 0.5, 0, 0.488584, 0, -0.106234, 16.0503, 5.0488, 24.7372 )
+
+[node name="Spatial9" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.338393, 0, 0.36809, 0, 0.5, 0, -0.36809, 0, -0.338393, -55.1311, 10.3435, -48.2109 )
+
+[node name="Spatial10" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.106234, 0, -0.488584, 0, 0.5, 0, 0.488584, 0, -0.106234, -45.8873, 10.0727, -45.6749 )
+
+[node name="Spatial11" parent="Props" instance=ExtResource( 10 )]
+transform = Transform( -0.106234, 0, -0.488584, 0, 0.5, 0, 0.488584, 0, -0.106234, -85.8585, 5.70825, -77.7511 )
+
 [node name="Unload" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.956213, 0, -0.292672, 0, 1, 0, 0.292672, 0, 0.956213, 19.1373, 2.31675, -57.5885 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
-volume_db = -10.0
-autoplay = true
+[node name="MusicPlayer" parent="." instance=ExtResource( 7 )]
 
 [node name="IcyHarbor" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -19.2649, 4.12722, -20.5756 )
 
-[node name="igloo_mesh" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.0838566, 0, 0.05448, 0, 0.1, 0, -0.05448, 0, 0.0838566, -89.485, 2.83142, -47.9977 )
-
-[node name="igloo_mesh2" parent="." instance=ExtResource( 5 )]
-transform = Transform( -0.0692551, 0, 0.0854619, 0, 0.11, 0, -0.0854619, 0, -0.0692551, -89.485, 3.27941, -38.5194 )
-
-[node name="Fireplace" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -85.0524, 2.98544, -43.2139 )
+[editable path="MusicPlayer"]

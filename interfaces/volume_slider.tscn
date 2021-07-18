@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://interfaces/volume_slider.gd" type="Script" id=1]
+
+[node name="volume_slider" type="HSlider"]
+margin_left = 35.0
+margin_top = 23.0
+margin_right = 171.0
+margin_bottom = 39.0
+max_value = 1.0
+step = 0.01
+value = 0.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

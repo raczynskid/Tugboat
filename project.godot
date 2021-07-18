@@ -23,6 +23,10 @@ config/icon="res://pics/tmp.png"
 Global="*res://scripts/Global.gd"
 Player="res://player_objects/Player.gd"
 
+[display]
+
+window/stretch/aspect="keep"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

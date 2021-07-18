@@ -12,63 +12,49 @@ font_data = ExtResource( 1 )
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
 
-[node name="MainMenu" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="MainMenu" type="HBoxContainer"]
+size_flags_horizontal = 2
+size_flags_vertical = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 692.401
-margin_top = 239.145
-margin_right = 778.401
-margin_bottom = 221.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 107.0
-margin_bottom = 233.0
+margin_bottom = 281.0
 theme = SubResource( 2 )
-custom_constants/separation = 12
+custom_constants/separation = 24
 
-[node name="NewGame" type="Button" parent="HBoxContainer/VBoxContainer"]
+[node name="NewGame" type="Button" parent="VBoxContainer"]
 margin_right = 107.0
 margin_bottom = 37.0
 text = "New Game"
 align = 2
 
-[node name="Tutorial" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 49.0
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+margin_top = 61.0
 margin_right = 107.0
-margin_bottom = 86.0
+margin_bottom = 98.0
 text = "Tutorial"
 
-[node name="Load" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 98.0
+[node name="Load" type="Button" parent="VBoxContainer"]
+margin_top = 122.0
 margin_right = 107.0
-margin_bottom = 135.0
+margin_bottom = 159.0
 text = "Load"
 
-[node name="Options" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 147.0
+[node name="Options" type="Button" parent="VBoxContainer"]
+margin_top = 183.0
 margin_right = 107.0
-margin_bottom = 184.0
+margin_bottom = 220.0
 text = "Options"
 
-[node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 196.0
+[node name="Exit" type="Button" parent="VBoxContainer"]
+margin_top = 244.0
 margin_right = 107.0
-margin_bottom = 233.0
+margin_bottom = 281.0
 text = "Exit"
 
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
-margin_left = 111.0
-margin_right = 111.0
-margin_bottom = 233.0
-
-[connection signal="button_up" from="HBoxContainer/VBoxContainer/NewGame" to="." method="_on_NewGame_button_up"]
-[connection signal="button_up" from="HBoxContainer/VBoxContainer/Tutorial" to="." method="_on_Tutorial_button_up"]
+[connection signal="button_up" from="VBoxContainer/NewGame" to="." method="_on_NewGame_button_up"]
+[connection signal="button_up" from="VBoxContainer/Tutorial" to="." method="_on_Tutorial_button_up"]

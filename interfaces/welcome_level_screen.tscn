@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interfaces/img/ship.png" type="Texture" id=1]
+[ext_resource path="res://interfaces/welcome_level_screen.gd" type="Script" id=2]
+[ext_resource path="res://interfaces/img/bar.png" type="Texture" id=3]
+
+[node name="WelcomeScreen" type="Node"]
+script = ExtResource( 2 )
+
+[node name="bar" type="Sprite" parent="."]
+position = Vector2( 794.075, 534.411 )
+scale = Vector2( 1.48, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="Ship_pic" type="Sprite" parent="."]
+position = Vector2( -150.988, 520.454 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 1 )

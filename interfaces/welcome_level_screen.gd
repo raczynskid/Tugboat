@@ -1,11 +1,13 @@
 extends Node
 
-onready var ship_img = get_node("Ship_pic")
+onready var ship_img = get_node("Ship_message/Ship_pic")
+onready var msg = get_node("Ship_message/msg")
 onready var bar = get_node("bar")
 onready var gone : bool = false
 
 func move():
 	ship_img.position.x += 10
+	msg.position.x += 8
 
 func disappear():
 	bar.modulate.a -= 0.03

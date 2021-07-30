@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/LevelTemplate.gd" type="Script" id=3]
 [ext_resource path="res://player_objects/Chain.tscn" type="PackedScene" id=4]
-[ext_resource path="res://interfaces/message.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world_objects/gameplay_objects/main_camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://interfaces/gauges/speed_gauge.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interfaces/pause_menu.tscn" type="PackedScene" id=8]
@@ -35,8 +34,6 @@ transform = Transform( 0.0999999, 0, -8.14907e-10, 5.82077e-11, 0.1, 4.78485e-09
 [node name="indicator" parent="cameras/main_camera" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.745, -2.55, -20 )
 
-[node name="Control" parent="cameras/main_camera" instance=ExtResource( 11 )]
-
 [node name="water" parent="." instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
 
@@ -51,9 +48,6 @@ nodes/node_b = NodePath("../../../Player")
 
 [node name="PinJoint" parent="Chain/ChainLink5" index="2"]
 nodes/node_a = NodePath("")
-
-[node name="Message" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -75,6 +69,8 @@ margin_bottom = 399.0
 
 [node name="volume_slider" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
+
+[node name="WelcomeScreen" parent="." instance=ExtResource( 11 )]
 
 [connection signal="locked_to_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_locked_to_barge"]
 [connection signal="unlocked_from_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_unlocked_from_barge"]

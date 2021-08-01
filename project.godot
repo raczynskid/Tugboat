@@ -25,6 +25,7 @@ Player="res://player_objects/Player.gd"
 
 [display]
 
+window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [rendering]

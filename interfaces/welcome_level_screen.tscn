@@ -12,15 +12,21 @@ font_data = ExtResource( 4 )
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
 
-[node name="WelcomeScreen" type="Node"]
+[node name="WelcomeScreen" type="Control"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="bar" type="Sprite" parent="."]
 position = Vector2( 794.075, 534.411 )
 scale = Vector2( 1.48, 1.2 )
 texture = ExtResource( 3 )
 
-[node name="Ship_message" type="Node2D" parent="."]
+[node name="Ship_message" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Ship_pic" type="Sprite" parent="Ship_message"]
 position = Vector2( -150.988, 520.454 )

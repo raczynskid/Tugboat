@@ -4,6 +4,7 @@ onready var ship_img = get_node("Ship_message/Ship_pic")
 onready var msg = get_node("Ship_message/msg")
 onready var bar = get_node("bar")
 onready var text = get_node("Ship_message/msg/RichTextLabel")
+onready var ship_msg = get_node("Ship_message")
 onready var gone : bool = false
 
 

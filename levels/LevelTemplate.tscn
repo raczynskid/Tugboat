@@ -50,6 +50,7 @@ nodes/node_b = NodePath("../../../Player")
 nodes/node_a = NodePath("")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enable = true
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -70,7 +71,9 @@ margin_bottom = 399.0
 [node name="volume_slider" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
 
-[node name="WelcomeScreen" parent="." instance=ExtResource( 11 )]
+[node name="WelcomeScreen" parent="CanvasLayer" instance=ExtResource( 11 )]
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
 [connection signal="locked_to_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_locked_to_barge"]
 [connection signal="unlocked_from_barge" from="Chain/ChainLink5/BargeHook" to="Chain" method="_on_BargeHook_unlocked_from_barge"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://world_objects/ice_props/fisherman.gltf" type="PackedScene" id=1]
+[ext_resource path="res://world_objects/ice_props/fisherman_pier.gltf" type="PackedScene" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "sway"
+length = 8.0
+loop = true
+tracks/0/type = "transform"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray(  )
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rotation_degrees:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 22.142, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 22.142, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:rotation_degrees:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:rotation_degrees:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.222457, 0.217339, 0.193086 )
+
+[node name="fisherman_pier" instance=ExtResource( 2 )]
+
+[node name="fisherman" parent="." index="2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.999745, -0.022569, 0, 0.022569, 0.999745, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="fisherman" index="5"]
+autoplay = "sway"
+anims/sway = SubResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="." index="3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+transform = Transform( 5.91597, 0, 0, 0, 32.6051, 0, 0, 0, 32.8342, 0, 0.0911981, -4.91558 )
+shape = SubResource( 2 )

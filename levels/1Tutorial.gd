@@ -16,7 +16,7 @@ onready var messages = {
 						}
 
 onready var up_pressed = false
-onready var down_pressed = false
+onready var down_pressed = true
 onready var right_pressed = false
 onready var left_pressed = false
 

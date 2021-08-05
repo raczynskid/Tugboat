@@ -7,8 +7,12 @@ onready var message_ui = get_node("Message")
 onready var cargo_counter = get_node("cameras/main_camera/indicator")
 onready var pause_menu = get_node("CanvasLayer/CenterContainer/pause_menu")
 onready var volume_slider = get_node("CanvasLayer/volume_slider")
+onready var timer = get_node("cameras/main_camera/Timer")
 
 onready var vehicle_paths = get_parent().get_node_or_null("VehiclesMisc")
+
+var time_elapsed = 0
+var crates_completed = 0
 
 func _ready():
 	pass
@@ -17,6 +21,7 @@ func _process(delta):
 	move_vehicles(delta)
 	if Input.is_action_just_pressed("ui_cancel"):
 		toggle_pause_menu()
+	time_elapsed = timer.elapsed
 
 func spawn_barge(x,y,z):
 	add_child(barge.instance())

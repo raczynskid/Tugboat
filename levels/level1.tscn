@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://levels/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://world_objects/gameplay_objects/ice_patch/ice_path.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://world_objects/ice_props/fireplace.tscn" type="PackedScene" id=9]
 [ext_resource path="res://world_objects/ice_props/snow_tree.tscn" type="PackedScene" id=10]
 [ext_resource path="res://levels/level1.gd" type="Script" id=11]
+[ext_resource path="res://world_objects/ice_props/fisherman_pier.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Curve3D" id=1]
 _data = {
@@ -176,6 +177,9 @@ transform = Transform( -0.106234, 0, -0.488584, 0, 0.5, 0, 0.488584, 0, -0.10623
 
 [node name="Spatial11" parent="Props" instance=ExtResource( 10 )]
 transform = Transform( -0.106234, 0, -0.488584, 0, 0.5, 0, 0.488584, 0, -0.106234, -85.8585, 5.70825, -77.7511 )
+
+[node name="fisherman_pier" parent="Props" instance=ExtResource( 12 )]
+transform = Transform( 0.92317, 0, -0.384392, 0, 1, 0, 0.384392, 0, 0.92317, -12.2441, 3.93137, -94.7714 )
 
 [node name="Unload" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.956213, 0, -0.292672, 0, 1, 0, 0.292672, 0, 0.956213, 19.1373, 2.31675, -57.5885 )

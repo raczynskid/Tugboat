@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://world_objects/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player_objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://levels/LevelTemplate.gd" type="Script" id=3]
 [ext_resource path="res://player_objects/Chain.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interfaces/timer.tscn" type="PackedScene" id=5]
 [ext_resource path="res://world_objects/gameplay_objects/main_camera.tscn" type="PackedScene" id=6]
 [ext_resource path="res://interfaces/gauges/speed_gauge.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interfaces/pause_menu.tscn" type="PackedScene" id=8]
@@ -33,6 +34,8 @@ transform = Transform( 0.0999999, 0, -8.14907e-10, 5.82077e-11, 0.1, 4.78485e-09
 
 [node name="indicator" parent="cameras/main_camera" instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.745, -2.55, -20 )
+
+[node name="Timer" parent="cameras/main_camera" instance=ExtResource( 5 )]
 
 [node name="water" parent="." instance=ExtResource( 1 )]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
